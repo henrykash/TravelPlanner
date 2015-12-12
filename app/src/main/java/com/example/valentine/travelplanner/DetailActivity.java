@@ -1,11 +1,12 @@
 package com.example.valentine.travelplanner;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Build;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
@@ -134,6 +135,7 @@ public class DetailActivity extends Activity implements View.OnClickListener {
 
             }
 
+            @TargetApi(Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onAnimationEnd(Animation animation) {
                 mAddButton.setVisibility(View.GONE);
