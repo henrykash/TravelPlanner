@@ -1,37 +1,56 @@
 package com.example.valentine.travelplanner;
 
-import android.support.v7.app.AppCompatActivity;
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
+    private Menu menu;
+    private boolean isListView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        isListView = true;
+    }
+
+    private void setUpActionBar() {
+
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_main, menu);
+        this.menu = menu;
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_toggle) {
+            toggle();
             return true;
         }
-
         return super.onOptionsItemSelected(item);
+    }
+
+    private void toggle() {
+        MenuItem item = menu.findItem(R.id.action_toggle);
+        if (isListView) {
+            item.setIcon(R.drawable.ic_action_list);
+            item.setTitle("Show as list");
+            isListView = false;
+        } else {
+            item.setIcon(R.drawable.ic_action_grid);
+            item.setTitle("Show as grid");
+            isListView = true;
+        }
     }
 }
