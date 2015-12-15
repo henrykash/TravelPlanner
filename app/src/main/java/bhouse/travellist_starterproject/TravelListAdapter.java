@@ -43,6 +43,10 @@ public class TravelListAdapter extends RecyclerView.Adapter<TravelListAdapter.Vi
         public ImageView placeImage;
         public ViewHolder(View itemView) {
             super(itemView);
+            placeHolder = (LinearLayout) itemView.findViewById(R.id.mainHolder);
+            placeName = (TextView) itemView.findViewById(R.id.placeName);
+            placeNameHolder = (LinearLayout) itemView.findViewById(R.id.placeNameHolder);
+            placeImage = (ImageView) itemView.findViewById(R.id.placeImage);
         }
     }
 }
