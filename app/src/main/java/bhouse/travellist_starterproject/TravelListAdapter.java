@@ -7,9 +7,14 @@ import android.view.ViewGroup;
 /**
  * Created by valentine on 12/15/15.
  */
-// 1
-public class TravelListAdapter extends RecyclerView.Adapter<TravelListAdapter.ViewHolder> {
 
+public class TravelListAdapter extends RecyclerView.Adapter<TravelListAdapter.ViewHolder> {
+    Context mContext;
+
+
+    public TravelListAdapter(Context context) {
+        this.mContext = context;
+    }
 
 
     @Override
