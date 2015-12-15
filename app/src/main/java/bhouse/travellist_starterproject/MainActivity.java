@@ -22,6 +22,10 @@ public class MainActivity extends Activity {
     setContentView(R.layout.activity_main);
 
     isListView = true;
+
+    mRecyclerView = (RecyclerView) findViewById(R.id.list);
+    mStaggeredLayoutManager = new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL);
+    mRecyclerView.setLayoutManager(mStaggeredLayoutManager);
   }
 
   private void setUpActionBar() {
