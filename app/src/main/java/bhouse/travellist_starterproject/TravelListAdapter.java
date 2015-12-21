@@ -33,7 +33,8 @@ public class TravelListAdapter extends RecyclerView.Adapter<TravelListAdapter.Vi
 
     @Override
     public int getItemCount() {
-        return 0;
+        return new PlaceData().placeList().size();
+
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -41,6 +42,7 @@ public class TravelListAdapter extends RecyclerView.Adapter<TravelListAdapter.Vi
         public LinearLayout placeNameHolder;
         public TextView placeName;
         public ImageView placeImage;
+
         public ViewHolder(View itemView) {
             super(itemView);
             placeHolder = (LinearLayout) itemView.findViewById(R.id.mainHolder);
