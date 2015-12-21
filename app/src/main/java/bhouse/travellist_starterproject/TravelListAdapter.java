@@ -18,7 +18,6 @@ import com.squareup.picasso.Picasso;
 public class TravelListAdapter extends RecyclerView.Adapter<TravelListAdapter.ViewHolder> {
     Context mContext;
 
-
     public TravelListAdapter(Context context) {
         this.mContext = context;
     }
