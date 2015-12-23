@@ -45,16 +45,13 @@ public class TravelListAdapter extends RecyclerView.Adapter<TravelListAdapter.Vi
 
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder implements bhouse.travellist_starterproject.ViewHolder {
         public LinearLayout placeHolder;
         public LinearLayout placeNameHolder;
         public TextView placeName;
         public ImageView placeImage;
 
-        @Override
-        public void onClick(View v) {
 
-        }
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -64,5 +61,7 @@ public class TravelListAdapter extends RecyclerView.Adapter<TravelListAdapter.Vi
             placeImage = (ImageView) itemView.findViewById(R.id.placeImage);
 
         }
+
+
     }
 }
