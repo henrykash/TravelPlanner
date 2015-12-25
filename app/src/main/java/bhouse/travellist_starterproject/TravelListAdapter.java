@@ -52,9 +52,7 @@ public class TravelListAdapter extends RecyclerView.Adapter<TravelListAdapter.Vi
         AdapterView.OnItemClickListener mItemClickListener;
 
 
-        public interface OnItemClickListener {
-            void onItemClick(View view, int position);
-        }
+
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -64,8 +62,6 @@ public class TravelListAdapter extends RecyclerView.Adapter<TravelListAdapter.Vi
             placeImage = (ImageView) itemView.findViewById(R.id.placeImage);
 
             placeHolder.setOnClickListener(this);
-
-
         }
 
         @Override
