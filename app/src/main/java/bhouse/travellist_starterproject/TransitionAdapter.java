@@ -1,12 +1,4 @@
-package com.example.valentine.travelplanner;
-
-import android.annotation.TargetApi;
-import android.os.Build;
-import android.transition.Transition;
-
 /**
- * Created by valentine on 12/12/15.
- * <p/>
  * Copyright 2014 Google
  * <p/>
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -22,30 +14,33 @@ import android.transition.Transition;
  * limitations under the License.
  */
 
-@TargetApi(Build.VERSION_CODES.KITKAT)
+package bhouse.travellist_starterproject;
+
+import android.transition.Transition;
+
 public class TransitionAdapter implements Transition.TransitionListener {
-    @Override
-    public void onTransitionStart(Transition transition) {
+  @Override
+  public void onTransitionStart(Transition transition) {
 
-    }
+  }
 
-    @Override
-    public void onTransitionEnd(Transition transition) {
+  @Override
+  public void onTransitionEnd(Transition transition) {
 
-    }
+  }
 
-    @Override
-    public void onTransitionCancel(Transition transition) {
+  @Override
+  public void onTransitionCancel(Transition transition) {
 
-    }
+  }
 
-    @Override
-    public void onTransitionPause(Transition transition) {
+  @Override
+  public void onTransitionPause(Transition transition) {
 
-    }
+  }
 
-    @Override
-    public void onTransitionResume(Transition transition) {
+  @Override
+  public void onTransitionResume(Transition transition) {
 
-    }
+  }
 }
